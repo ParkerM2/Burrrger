@@ -19,7 +19,7 @@ var orm = {
         queryString += JSON.stringify(value1) + "," + value2; queryString += ");";
         connection.query(queryString, function(err) {
             if (err) {throw err};
-            console.log("successful INSERT into table");
+            console.log("successfully INSERTED into ", table);
         });
     },
     updateOne : function (table, id, burger_name, devoured, whereId) {
@@ -28,12 +28,10 @@ var orm = {
         queryString += " SET id='" + id + "', burger_name='" + burger_name + "', devoured='" + devoured +"'";
         queryString += " WHERE id=";
         queryString += whereId + ";";
-        console.log(queryString)
         connection.query(queryString, function(err, result) {
             if (err) {throw err};
-            console.log("Successfully updated")
-        })
-
+            console.log("Successfully updated table :", table, "with :", burger_name, devoured, "... AT id : ", whereId)
+        });
     }
 }
 module.exports = orm;

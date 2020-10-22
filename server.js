@@ -30,7 +30,6 @@ app.listen(PORT, function() {
 });
 
 // orm.selectAll("burgers") <- works ***;
-// orm.insertOne("burgers", "burger_name","devoured","The Small Boi", true) <- works ***;
+//  orm.insertOne("burgers", "burger_name","devoured","The Small Boi", true); *** works
 // Params = table, SET column, Values for columns, Where = id =, 
-// orm.updateOne("burgers", "1", "Smoll Boi", "1", "1") <- works ***;
-// orm.selectAll("burgers");
+// orm.updateOne("burgers", "1", "Smoll Boi", "1", "1")
