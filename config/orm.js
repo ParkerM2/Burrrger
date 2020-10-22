@@ -1,6 +1,5 @@
 var connection = require("./connection");
 var inquirer = require('inquirer');
-const { query } = require("express");
 var orm = {
     selectAll : function(table) {
         let queryString = "SELECT * FROM " + table;
