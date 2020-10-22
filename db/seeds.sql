@@ -1,0 +1,5 @@
+INSERT INTO burgers (burger_name, devoured) VALUES ('The Big Burger', false)
+INSERT INTO burgers (burger_name, devoured) VALUES ('The Big Burger', false)
+INSERT INTO burgers (burger_name, devoured) VALUES ('The Big Burger', false)
+INSERT INTO burgers (burger_name, devoured) VALUES ('The Big Burger', false)
+INSERT INTO burgers (burger_name, devoured) VALUES ('The Big Burger', false)
