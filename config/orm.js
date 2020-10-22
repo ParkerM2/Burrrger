@@ -1,8 +1,9 @@
 var connection = require("./connection");
-var inquirer = require('inquirer');
 var orm = {
     selectAll : function(table) {
+        // creating the query string 
         let queryString = "SELECT * FROM " + table;
+        //querying the mysql connection and calling a function to console.log the response
         connection.query(queryString, function(err, result) {
             if (err) {throw err};
             // declaring empty arrays for data to be pushed to
@@ -13,9 +14,15 @@ var orm = {
         });
     },
     insertOne : function(table, column1, column2, value1, value2) {
-        let queryString = "INSERT INTO "; queryString += table; queryString += "(";
-        queryString += column1 + "," + column2; queryString += ") "; queryString += "VALUES (";
-        queryString += JSON.stringify(value1) + "," + value2; queryString += ");";
+        let queryString = "INSERT INTO ";
+        queryString += table; 
+        queryString += "(";
+        queryString += column1 + "," + column2; 
+        queryString += ") "; 
+        queryString += "VALUES (";
+        queryString += value1 + "," + value2; 
+        queryString += ");";
+
         connection.query(queryString, function(err) {
             if (err) {throw err};
             console.log("successfully INSERTED into ", table);

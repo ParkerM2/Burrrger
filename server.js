@@ -18,10 +18,13 @@ var exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-// Import routes and give the server access to them.
-// var routes = require("./controllers/catsController.js");
+// app.engine("handlebars", exphbs({ defaultLayout: "main" 
+// ,burgerDir: __dirname + './views/burger'
+// }));
+//Import routes and give the server access to them.
+var routes = require("./controllers/burgers_controller.js");
 
-// app.use(routes);
+app.use(routes);
 
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, function() {
@@ -32,4 +35,4 @@ app.listen(PORT, function() {
 // orm.selectAll("burgers") <- works ***;
 //  orm.insertOne("burgers", "burger_name","devoured","The Small Boi", true); *** works
 // Params = table, SET column, Values for columns, Where = id =, 
-// orm.updateOne("burgers", "1", "Smoll Boi", "1", "1")
+// ormupdateOne("burgers", "1", "Smoll Boi", "1", "1")

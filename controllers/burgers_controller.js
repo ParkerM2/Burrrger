@@ -9,19 +9,19 @@ router.get('/', function (req,res) {
 
 // Creating routes and logic
 router.get("/", function(req, res) {
-    burger.all(function(data) {
+    burger.all("burgers", function(data) {
         var object = {
             burgers : data
-        };
+        }
         console.log(object)
         res.render("index", object)
     });
 });
 
 router.post("/api/burgers", function(req, res) {
-    orm.insertOne(["burger_name"],[req.body.burger_name],function (result) {
+    burger.insertOne(req.body.burger_name,function (result) {
         // might need to change result data here
-        res.json({id : result.insertId})
+        res.json(result)
     }); 
 });
 
