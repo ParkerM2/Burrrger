@@ -8,20 +8,20 @@ var burger = {
             cb(res)
         });
     },
-    insertOne: function(val1) {
+    create: function(val1) {
         table = "burgers";
         col1 = "burger_name";
         col2 = "devoured";
         val2 = "false";
-        orm.insertOne(table, col1, col2, val1, val2, function (result) {
+        orm.create(table, col1, col2, val1, val2, function (result) {
             cb(res)
         });
     },
-    updateOne: function(whereId) {
+    update: function(whereId) {
         table = "burgers";
         col1 = "burger_name";
         col2 = "devoured"
-        orm.updateOne(table, id, col1, col2, whereId, function (result) {
+        orm.update(table, id, col1, col2, whereId, function (result) {
             cb(res)
         });
     }

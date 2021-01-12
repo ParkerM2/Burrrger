@@ -13,7 +13,7 @@ var orm = {
             console.table(idArr)
         });
     },
-    insertOne : function(table, column1, column2, value1, value2) {
+    create : function(table, column1, column2, value1, value2) {
         let queryString = "INSERT INTO ";
         queryString += table; 
         queryString += "(";
@@ -28,7 +28,7 @@ var orm = {
             console.log("successfully INSERTED into ", table);
         });
     },
-    updateOne : function (table, id, burger_name, devoured, whereId) {
+    update : function (table, id, burger_name, devoured, whereId) {
         let queryString = "UPDATE ";
         queryString += table;
         queryString += " SET id='" + id + "', burger_name='" + burger_name + "', devoured='" + devoured +"'";

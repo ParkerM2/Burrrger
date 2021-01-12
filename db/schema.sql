@@ -9,4 +9,3 @@ CREATE TABLE burgers (
     devoured BOOLEAN,
 )
 queryString = "SELET * FROM database"
-choices 
